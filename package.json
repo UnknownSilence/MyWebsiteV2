@@ -1,0 +1,19 @@
+{
+  "name": "websitelayout",
+  "version": "1.0.0",
+  "description": "personal website.",
+  "main": "interactions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Trent Hardy",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "particles.js": "^2.0.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "website"
+  ]
+}

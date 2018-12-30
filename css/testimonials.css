@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik+Mono+One|Share+Tech+Mono');
+
+p {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 5%;
+    font-family: 'Share Tech Mono', monospace;
+    font-style: italic;
+}
+
+h1 {
+    color: #58f2dd;
+}
+
+h5 {
+    color: #f60053;
+}
+
+hr {
+    color: #f60053;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

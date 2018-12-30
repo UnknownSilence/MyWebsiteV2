@@ -1,0 +1,768 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+/*
+   * Global add-ons
+   */
+
+/*
+   * Top navigation
+   * Hide default border to remove 1px line.
+   */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #2c2f33;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #58f2dd;
+}
+
+html,
+body {
+  font: 0.8em/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    sans-serif;
+  height: 100%;
+  color: #222;
+  min-height: 100%;
+  margin: 0px;
+  font-size: 1em;
+  line-height: 1.4;
+  color: white;
+  height: 100vh;
+  width: 100%;
+  padding: 0px;
+  opacity: 1;
+  padding: 0 !important;
+  margin: 0 !important;
+  transition: 1s opacity;
+
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: none;
+}
+
+h1:focus {
+  outline: 0;
+}
+
+div:focus {
+  outline: 0;
+}
+
+.emptySpace {
+  overflow-wrap: break-word;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/*
+   * Sidebar
+   */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 65px;
+  background-color: #232323;
+  position: fixed;
+  height: 100%;
+  text-align: center;
+}
+
+/* Sidebar links */
+.sidebar a {
+  margin-top: 7px;
+  display: block;
+  position: relative;
+  top: 1%;
+  color: #ec2064;
+  padding: 16px;
+  text-decoration: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Active/current link */
+.sidebar i.active {
+  color: #ec2064;
+}
+
+/* Links on mouse-over */
+.sidebar i:hover:not(.active) {
+  color: #58f2dd;
+}
+
+.linkbtn:hover {
+  color: #58f2dd !important;
+}
+
+/* Overlay text popups */
+
+#theHomeIcon:hover .overlayHome {
+  opacity: 1 !important;
+}
+
+.overlayHome {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #232323;
+}
+
+#theAboutIcon:hover .overlayAbout {
+  opacity: 1 !important;
+}
+
+.overlayAbout {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #232323;
+}
+
+#theSkillsIcon:hover .overlaySkills {
+  opacity: 1 !important;
+}
+
+.overlaySkills {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #232323;
+}
+
+#theEducationIcon:hover .overlayEducation {
+  opacity: 1 !important;
+}
+
+.overlayEducation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #232323;
+}
+
+#theCertificationIcon:hover .overlayCertification {
+  opacity: 1 !important;
+}
+
+.overlayCertification {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #232323;
+}
+
+#theTestimonialIcon:hover .overlayTestimonial {
+  opacity: 1 !important;
+}
+
+.overlayTestimonial {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #232323;
+}
+
+#theProjectsIcon:hover .overlayProjects {
+  opacity: 1 !important;
+}
+
+.overlayProjects {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #232323;
+}
+
+.text {
+  cursor: pointer;
+  background-color: #232323;
+  color: #46ffdb;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar a {
+    position: relative;
+    top: 0px !important;
+    text-align: center !important;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  #myLogo {
+    display: none;
+  }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+
+  .aboutPage {
+    overflow-y: visible !important;
+  }
+
+  .iconGroup {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+
+/* Hide for mobile, show later */
+
+/*
+   * Main content
+   */
+
+.main {
+  margin-left: 65px;
+  height: 100%;
+}
+
+@media screen and (max-height: 838px) {
+  .sidebar {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .sidebar a {
+    padding-right: 8px;
+  }
+}
+
+/*
+   * Placeholder dashboard ideas
+   */
+
+.placeholders {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.placeholders h4 {
+  margin-bottom: 0;
+}
+
+.placeholder img {
+  display: inline-block;
+}
+
+svg#myLogo {
+  z-index: 3;
+}
+
+#TLetter_1_:hover {
+  -webkit-filter: url("#glitch");
+  filter: url("#glitch");
+}
+
+#LeftCodeBracket:hover {
+  -webkit-filter: url("#glitch");
+  filter: url("#glitch");
+}
+
+#RightCodeBracket:hover {
+  -webkit-filter: url("#glitch");
+  filter: url("#glitch");
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+
+/* Real glitch effect */
+.glitch {
+  position: relative;
+  cursor: default;
+}
+
+.glitch:after {
+  animation: glitch-animation 2s infinite linear alternate-reverse;
+  background: #242424;
+  clip: rect(0, 900px, 0, 0);
+  color: #46ffdb;
+  content: attr(data-text);
+  cursor: default;
+  left: 2px;
+  position: absolute;
+  text-shadow: -1px 0 red;
+  top: 0;
+}
+
+.glitch:before {
+  animation: glitch-animation-2 3s infinite linear alternate-reverse;
+  background: #242424;
+  clip: rect(0, 900px, 0, 0);
+  color: #46ffdb;
+  content: attr(data-text);
+  left: -2px;
+  position: absolute;
+  text-shadow: 1px 0 blue;
+}
+
+/* Expanded Animations */
+@keyframes glitch-animation {
+  0% {
+    clip: rect(42px, 9999px, 44px, 0);
+  }
+
+  5% {
+    clip: rect(12px, 9999px, 59px, 0);
+  }
+
+  10% {
+    clip: rect(48px, 9999px, 29px, 0);
+  }
+
+  15.0% {
+    clip: rect(42px, 9999px, 73px, 0);
+  }
+
+  20% {
+    clip: rect(63px, 9999px, 27px, 0);
+  }
+
+  25% {
+    clip: rect(34px, 9999px, 55px, 0);
+  }
+
+  30.0% {
+    clip: rect(86px, 9999px, 73px, 0);
+  }
+
+  35% {
+    clip: rect(20px, 9999px, 20px, 0);
+  }
+
+  40% {
+    clip: rect(26px, 9999px, 60px, 0);
+  }
+
+  45% {
+    clip: rect(25px, 9999px, 66px, 0);
+  }
+
+  50% {
+    clip: rect(57px, 9999px, 98px, 0);
+  }
+
+  55.0% {
+    clip: rect(5px, 9999px, 46px, 0);
+  }
+
+  60.0% {
+    clip: rect(82px, 9999px, 31px, 0);
+  }
+
+  65% {
+    clip: rect(54px, 9999px, 27px, 0);
+  }
+
+  70% {
+    clip: rect(28px, 9999px, 99px, 0);
+  }
+
+  75% {
+    clip: rect(45px, 9999px, 69px, 0);
+  }
+
+  80% {
+    clip: rect(23px, 9999px, 85px, 0);
+  }
+
+  85.0% {
+    clip: rect(54px, 9999px, 84px, 0);
+  }
+
+  90% {
+    clip: rect(45px, 9999px, 47px, 0);
+  }
+
+  95% {
+    clip: rect(37px, 9999px, 20px, 0);
+  }
+
+  100% {
+    clip: rect(4px, 9999px, 91px, 0);
+  }
+}
+
+@keyframes glitch-animation-2 {
+  0% {
+    clip: rect(65px, 9999px, 100px, 0);
+  }
+
+  5% {
+    clip: rect(52px, 9999px, 74px, 0);
+  }
+
+  10% {
+    clip: rect(79px, 9999px, 85px, 0);
+  }
+
+  15.0% {
+    clip: rect(75px, 9999px, 5px, 0);
+  }
+
+  20% {
+    clip: rect(67px, 9999px, 61px, 0);
+  }
+
+  25% {
+    clip: rect(14px, 9999px, 79px, 0);
+  }
+
+  30.0% {
+    clip: rect(1px, 9999px, 66px, 0);
+  }
+
+  35% {
+    clip: rect(86px, 9999px, 30px, 0);
+  }
+
+  40% {
+    clip: rect(23px, 9999px, 98px, 0);
+  }
+
+  45% {
+    clip: rect(85px, 9999px, 72px, 0);
+  }
+
+  50% {
+    clip: rect(71px, 9999px, 75px, 0);
+  }
+
+  55.0% {
+    clip: rect(2px, 9999px, 48px, 0);
+  }
+
+  60.0% {
+    clip: rect(30px, 9999px, 16px, 0);
+  }
+
+  65% {
+    clip: rect(59px, 9999px, 50px, 0);
+  }
+
+  70% {
+    clip: rect(41px, 9999px, 62px, 0);
+  }
+
+  75% {
+    clip: rect(2px, 9999px, 82px, 0);
+  }
+
+  80% {
+    clip: rect(47px, 9999px, 73px, 0);
+  }
+
+  85.0% {
+    clip: rect(3px, 9999px, 27px, 0);
+  }
+
+  90% {
+    clip: rect(26px, 9999px, 55px, 0);
+  }
+
+  95% {
+    clip: rect(42px, 9999px, 97px, 0);
+  }
+
+  100% {
+    clip: rect(38px, 9999px, 49px, 0);
+  }
+}
+
+.glitch2 {
+  position: relative;
+  cursor: default;
+}
+
+.glitch2:after {
+  animation: glitch-animation2 2s infinite linear alternate-reverse;
+  background: #242424;
+  clip: rect(0, 900px, 0, 0);
+  color: #ec2065;
+  content: attr(data-text);
+  left: 2px;
+  position: absolute;
+  cursor: default;
+  text-shadow: -1px 0 #ec2065;
+  top: 0;
+}
+
+.glitch2:before {
+  animation: glitch-animation-3 3s infinite linear alternate-reverse;
+  background: #242424;
+  clip: rect(0, 900px, 0, 0);
+  color: #ec2065;
+  content: attr(data-text);
+  left: -2px;
+  position: absolute;
+  cursor: default;
+  text-shadow: 1px 0 red;
+}
+
+/* Expanded Animations */
+@keyframes glitch-animation2 {
+  0% {
+    clip: rect(42px, 9999px, 44px, 0);
+  }
+
+  5% {
+    clip: rect(12px, 9999px, 59px, 0);
+  }
+
+  10% {
+    clip: rect(48px, 9999px, 29px, 0);
+  }
+
+  15.0% {
+    clip: rect(42px, 9999px, 73px, 0);
+  }
+
+  20% {
+    clip: rect(63px, 9999px, 27px, 0);
+  }
+
+  25% {
+    clip: rect(34px, 9999px, 55px, 0);
+  }
+
+  30.0% {
+    clip: rect(86px, 9999px, 73px, 0);
+  }
+
+  35% {
+    clip: rect(20px, 9999px, 20px, 0);
+  }
+
+  40% {
+    clip: rect(26px, 9999px, 60px, 0);
+  }
+
+  45% {
+    clip: rect(25px, 9999px, 66px, 0);
+  }
+
+  50% {
+    clip: rect(57px, 9999px, 98px, 0);
+  }
+
+  55.0% {
+    clip: rect(5px, 9999px, 46px, 0);
+  }
+
+  60.0% {
+    clip: rect(82px, 9999px, 31px, 0);
+  }
+
+  65% {
+    clip: rect(54px, 9999px, 27px, 0);
+  }
+
+  70% {
+    clip: rect(28px, 9999px, 99px, 0);
+  }
+
+  75% {
+    clip: rect(45px, 9999px, 69px, 0);
+  }
+
+  80% {
+    clip: rect(23px, 9999px, 85px, 0);
+  }
+
+  85.0% {
+    clip: rect(54px, 9999px, 84px, 0);
+  }
+
+  90% {
+    clip: rect(45px, 9999px, 47px, 0);
+  }
+
+  95% {
+    clip: rect(37px, 9999px, 20px, 0);
+  }
+
+  100% {
+    clip: rect(4px, 9999px, 91px, 0);
+  }
+}
+
+@keyframes glitch-animation-3 {
+  0% {
+    clip: rect(65px, 9999px, 100px, 0);
+  }
+
+  5% {
+    clip: rect(52px, 9999px, 74px, 0);
+  }
+
+  10% {
+    clip: rect(79px, 9999px, 85px, 0);
+  }
+
+  15.0% {
+    clip: rect(75px, 9999px, 5px, 0);
+  }
+
+  20% {
+    clip: rect(67px, 9999px, 61px, 0);
+  }
+
+  25% {
+    clip: rect(14px, 9999px, 79px, 0);
+  }
+
+  30.0% {
+    clip: rect(1px, 9999px, 66px, 0);
+  }
+
+  35% {
+    clip: rect(86px, 9999px, 30px, 0);
+  }
+
+  40% {
+    clip: rect(23px, 9999px, 98px, 0);
+  }
+
+  45% {
+    clip: rect(85px, 9999px, 72px, 0);
+  }
+
+  50% {
+    clip: rect(71px, 9999px, 75px, 0);
+  }
+
+  55.0% {
+    clip: rect(2px, 9999px, 48px, 0);
+  }
+
+  60.0% {
+    clip: rect(30px, 9999px, 16px, 0);
+  }
+
+  65% {
+    clip: rect(59px, 9999px, 50px, 0);
+  }
+
+  70% {
+    clip: rect(41px, 9999px, 62px, 0);
+  }
+
+  75% {
+    clip: rect(2px, 9999px, 82px, 0);
+  }
+
+  80% {
+    clip: rect(47px, 9999px, 73px, 0);
+  }
+
+  85.0% {
+    clip: rect(3px, 9999px, 27px, 0);
+  }
+
+  90% {
+    clip: rect(26px, 9999px, 55px, 0);
+  }
+
+  95% {
+    clip: rect(42px, 9999px, 97px, 0);
+  }
+
+  100% {
+    clip: rect(38px, 9999px, 49px, 0);
+  }
+}

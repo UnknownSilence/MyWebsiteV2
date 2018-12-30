@@ -1,0 +1,767 @@
+/* Primary Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik+Mono+One|Share+Tech+Mono');
+
+html,
+body {
+ font-family: 'Roboto Mono', monospace;
+  color: white;
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: none;
+}
+
+h1:focus {
+  outline: 0;
+}
+
+div:focus {
+  outline: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #2c2f33;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #58f2dd;
+}
+
+h1 {
+  font-size: 1.4em;
+}
+
+em {
+  font-style: normal;
+  font-size: 1em;
+  color: #58f2dd;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.socialIcon:hover {
+  color: #f60053;
+}
+
+/* Layout */
+.s-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.s-layout__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+/* Sidebar */
+.s-sidebar__trigger {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  background: #232323;
+}
+
+.s-sidebar__trigger>i {
+  display: inline-block;
+  margin: 1em 0 0 1em;
+  color: #58f2dd;
+  text-align: center;
+}
+
+.s-sidebar__nav {
+  position: fixed;
+  top: 0;
+  left: -8em;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  width: 8em;
+  height: 100%;
+  background: #232323;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.s-sidebar__nav:hover,
+.s-sidebar__nav:focus,
+.s-sidebar__trigger:focus+.s-sidebar__nav,
+.s-sidebar__trigger:hover+.s-sidebar__nav {
+  left: 0;
+}
+
+.s-sidebar__nav ul {
+  position: absolute;
+  top: 4em;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 8em;
+  text-align: center;
+}
+
+.s-sidebar__nav ul li {
+  width: 100%;
+  height: 100%;
+}
+
+.s-sidebar__nav-link {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  margin: 0 auto;
+  height: 4em;
+  color: #f60053;
+  text-align: center;
+}
+
+.s-sidebar__nav-link em {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#theAboutIcon:hover .overlayAbout {
+  opacity: 1 !important;
+  background-color: #232323;
+}
+
+#theAboutIcon:hover #theAboutIcon {
+  opacity: 1 !important;
+  background-color: #232323;
+}
+
+.overlayAbout {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+#theHomeIcon:hover .overlayHome {
+  opacity: 1 !important;
+  background-color: #232323;
+}
+
+#theHomeIcon:hover #theHomeIcon {
+  opacity: 1 !important;
+  background-color: #232323;
+}
+
+.overlayHome {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+#theSkillsIcon:hover .overlaySkills {
+  opacity: 1 !important;
+  background-color: #232323;
+}
+
+#theSkillsIcon:hover #theSkillsIcon {
+  opacity: 1 !important;
+  background-color: #232323;
+}
+
+.overlaySkills {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+#theEducationIcon:hover .overlayEducation {
+  opacity: 1 !important;
+  background-color: #232323;
+}
+
+#theEducationIcon:hover #theEducationIcon {
+  opacity: 1 !important;
+  background-color: #232323;
+}
+
+.overlayEducation {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+#theCertificationIcon:hover .overlayCertifications {
+  opacity: 1 !important;
+  background-color: #232323;
+}
+
+#theCertificationIcon:hover #theCertificationIcon {
+  opacity: 1 !important;
+  background-color: #232323;
+}
+
+.overlayCertifications {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+#theTestimonialIcon:hover .overlayTestimonials {
+  opacity: 1 !important;
+  background-color: #232323;
+}
+
+#theTestimonialIcon:hover #theTestimonialIcon {
+  opacity: 1 !important;
+  background-color: #232323;
+}
+
+.overlayTestimonials {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+#theProjectsIcon:hover .overlayProjects {
+  opacity: 1 !important;
+  background-color: #232323;
+}
+
+#theProjectsIcon:hover #theProjectsIcon {
+  opacity: 1 !important;
+  background-color: #232323;
+}
+
+.overlayProjects {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.s-sidebar__nav-link>i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.s-sidebar__nav-link>i::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Mobile First */
+@media (min-width: 42em) {
+  .s-layout__content {
+    margin-left: 2.9em;
+  }
+
+  /* Sidebar */
+  .s-sidebar__trigger {
+    width: 2.9em;
+  }
+
+  .s-sidebar__nav {
+    width: 2.9em;
+    left: 0;
+  }
+
+  .s-sidebar__nav:hover,
+  .s-sidebar__nav:focus,
+  .s-sidebar__trigger:hover+.s-sidebar__nav,
+  .s-sidebar__trigger:focus+.s-sidebar__nav {
+    width: 8em;
+  }
+}
+
+@media (min-width: 42em) {
+  .s-layout__content {
+    margin-left: 8em;
+  }
+
+  /* Sidebar */
+  .s-sidebar__trigger {
+    display: none;
+  }
+
+  .s-sidebar__nav {
+    width: 8em;
+  }
+
+  .s-sidebar__nav ul {
+    top: 1em;
+  }
+}
+
+svg#myLogo {
+  z-index: 3;
+}
+
+#TLetter_1_:hover {
+  -webkit-filter: url("#glitch");
+  filter: url("#glitch");
+}
+
+#LeftCodeBracket:hover {
+  -webkit-filter: url("#glitch");
+  filter: url("#glitch");
+}
+
+#RightCodeBracket:hover {
+  -webkit-filter: url("#glitch");
+  filter: url("#glitch");
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  background-color: #262626;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* ---- stats.js ---- */
+
+/* Real glitch effect */
+.glitch {
+  position: relative;
+  cursor: default;
+}
+
+.glitch:after {
+  animation: glitch-animation 2s infinite linear alternate-reverse;
+  background-color: #262626;
+  clip: rect(0, 900px, 0, 0);
+  color: #46ffdb;
+  content: attr(data-text);
+  cursor: default;
+  left: 2px;
+  position: absolute;
+  text-shadow: -1px 0 red;
+  top: 0;
+}
+
+.glitch:before {
+  animation: glitch-animation-2 3s infinite linear alternate-reverse;
+  background-color: #262626;
+  clip: rect(0, 900px, 0, 0);
+  color: #46ffdb;
+  content: attr(data-text);
+  left: -2px;
+  position: absolute;
+  text-shadow: 1px 0 blue;
+}
+
+/* Expanded Animations */
+@keyframes glitch-animation {
+  0% {
+    clip: rect(42px, 9999px, 44px, 0);
+  }
+
+  5% {
+    clip: rect(12px, 9999px, 59px, 0);
+  }
+
+  10% {
+    clip: rect(48px, 9999px, 29px, 0);
+  }
+
+  15.0% {
+    clip: rect(42px, 9999px, 73px, 0);
+  }
+
+  20% {
+    clip: rect(63px, 9999px, 27px, 0);
+  }
+
+  25% {
+    clip: rect(34px, 9999px, 55px, 0);
+  }
+
+  30.0% {
+    clip: rect(86px, 9999px, 73px, 0);
+  }
+
+  35% {
+    clip: rect(20px, 9999px, 20px, 0);
+  }
+
+  40% {
+    clip: rect(26px, 9999px, 60px, 0);
+  }
+
+  45% {
+    clip: rect(25px, 9999px, 66px, 0);
+  }
+
+  50% {
+    clip: rect(57px, 9999px, 98px, 0);
+  }
+
+  55.0% {
+    clip: rect(5px, 9999px, 46px, 0);
+  }
+
+  60.0% {
+    clip: rect(82px, 9999px, 31px, 0);
+  }
+
+  65% {
+    clip: rect(54px, 9999px, 27px, 0);
+  }
+
+  70% {
+    clip: rect(28px, 9999px, 99px, 0);
+  }
+
+  75% {
+    clip: rect(45px, 9999px, 69px, 0);
+  }
+
+  80% {
+    clip: rect(23px, 9999px, 85px, 0);
+  }
+
+  85.0% {
+    clip: rect(54px, 9999px, 84px, 0);
+  }
+
+  90% {
+    clip: rect(45px, 9999px, 47px, 0);
+  }
+
+  95% {
+    clip: rect(37px, 9999px, 20px, 0);
+  }
+
+  100% {
+    clip: rect(4px, 9999px, 91px, 0);
+  }
+}
+
+@keyframes glitch-animation-2 {
+  0% {
+    clip: rect(65px, 9999px, 100px, 0);
+  }
+
+  5% {
+    clip: rect(52px, 9999px, 74px, 0);
+  }
+
+  10% {
+    clip: rect(79px, 9999px, 85px, 0);
+  }
+
+  15.0% {
+    clip: rect(75px, 9999px, 5px, 0);
+  }
+
+  20% {
+    clip: rect(67px, 9999px, 61px, 0);
+  }
+
+  25% {
+    clip: rect(14px, 9999px, 79px, 0);
+  }
+
+  30.0% {
+    clip: rect(1px, 9999px, 66px, 0);
+  }
+
+  35% {
+    clip: rect(86px, 9999px, 30px, 0);
+  }
+
+  40% {
+    clip: rect(23px, 9999px, 98px, 0);
+  }
+
+  45% {
+    clip: rect(85px, 9999px, 72px, 0);
+  }
+
+  50% {
+    clip: rect(71px, 9999px, 75px, 0);
+  }
+
+  55.0% {
+    clip: rect(2px, 9999px, 48px, 0);
+  }
+
+  60.0% {
+    clip: rect(30px, 9999px, 16px, 0);
+  }
+
+  65% {
+    clip: rect(59px, 9999px, 50px, 0);
+  }
+
+  70% {
+    clip: rect(41px, 9999px, 62px, 0);
+  }
+
+  75% {
+    clip: rect(2px, 9999px, 82px, 0);
+  }
+
+  80% {
+    clip: rect(47px, 9999px, 73px, 0);
+  }
+
+  85.0% {
+    clip: rect(3px, 9999px, 27px, 0);
+  }
+
+  90% {
+    clip: rect(26px, 9999px, 55px, 0);
+  }
+
+  95% {
+    clip: rect(42px, 9999px, 97px, 0);
+  }
+
+  100% {
+    clip: rect(38px, 9999px, 49px, 0);
+  }
+}
+
+.glitch2 {
+  position: relative;
+  cursor: default;
+}
+
+.glitch2:after {
+  animation: glitch-animation2 2s infinite linear alternate-reverse;
+  background: #262626;
+  clip: rect(0, 900px, 0, 0);
+  color: #ec2065;
+  content: attr(data-text);
+  left: 2px;
+  position: absolute;
+  cursor: default;
+  text-shadow: -1px 0 #ec2065;
+  top: 0;
+}
+
+.glitch2:before {
+  animation: glitch-animation-3 3s infinite linear alternate-reverse;
+  background: #262626;
+  clip: rect(0, 900px, 0, 0);
+  color: #ec2065;
+  content: attr(data-text);
+  left: -2px;
+  position: absolute;
+  cursor: default;
+  text-shadow: 1px 0 red;
+}
+
+/* Expanded Animations */
+@keyframes glitch-animation2 {
+  0% {
+    clip: rect(42px, 9999px, 44px, 0);
+  }
+
+  5% {
+    clip: rect(12px, 9999px, 59px, 0);
+  }
+
+  10% {
+    clip: rect(48px, 9999px, 29px, 0);
+  }
+
+  15.0% {
+    clip: rect(42px, 9999px, 73px, 0);
+  }
+
+  20% {
+    clip: rect(63px, 9999px, 27px, 0);
+  }
+
+  25% {
+    clip: rect(34px, 9999px, 55px, 0);
+  }
+
+  30.0% {
+    clip: rect(86px, 9999px, 73px, 0);
+  }
+
+  35% {
+    clip: rect(20px, 9999px, 20px, 0);
+  }
+
+  40% {
+    clip: rect(26px, 9999px, 60px, 0);
+  }
+
+  45% {
+    clip: rect(25px, 9999px, 66px, 0);
+  }
+
+  50% {
+    clip: rect(57px, 9999px, 98px, 0);
+  }
+
+  55.0% {
+    clip: rect(5px, 9999px, 46px, 0);
+  }
+
+  60.0% {
+    clip: rect(82px, 9999px, 31px, 0);
+  }
+
+  65% {
+    clip: rect(54px, 9999px, 27px, 0);
+  }
+
+  70% {
+    clip: rect(28px, 9999px, 99px, 0);
+  }
+
+  75% {
+    clip: rect(45px, 9999px, 69px, 0);
+  }
+
+  80% {
+    clip: rect(23px, 9999px, 85px, 0);
+  }
+
+  85.0% {
+    clip: rect(54px, 9999px, 84px, 0);
+  }
+
+  90% {
+    clip: rect(45px, 9999px, 47px, 0);
+  }
+
+  95% {
+    clip: rect(37px, 9999px, 20px, 0);
+  }
+
+  100% {
+    clip: rect(4px, 9999px, 91px, 0);
+  }
+}
+
+@keyframes glitch-animation-3 {
+  0% {
+    clip: rect(65px, 9999px, 100px, 0);
+  }
+
+  5% {
+    clip: rect(52px, 9999px, 74px, 0);
+  }
+
+  10% {
+    clip: rect(79px, 9999px, 85px, 0);
+  }
+
+  15.0% {
+    clip: rect(75px, 9999px, 5px, 0);
+  }
+
+  20% {
+    clip: rect(67px, 9999px, 61px, 0);
+  }
+
+  25% {
+    clip: rect(14px, 9999px, 79px, 0);
+  }
+
+  30.0% {
+    clip: rect(1px, 9999px, 66px, 0);
+  }
+
+  35% {
+    clip: rect(86px, 9999px, 30px, 0);
+  }
+
+  40% {
+    clip: rect(23px, 9999px, 98px, 0);
+  }
+
+  45% {
+    clip: rect(85px, 9999px, 72px, 0);
+  }
+
+  50% {
+    clip: rect(71px, 9999px, 75px, 0);
+  }
+
+  55.0% {
+    clip: rect(2px, 9999px, 48px, 0);
+  }
+
+  60.0% {
+    clip: rect(30px, 9999px, 16px, 0);
+  }
+
+  65% {
+    clip: rect(59px, 9999px, 50px, 0);
+  }
+
+  70% {
+    clip: rect(41px, 9999px, 62px, 0);
+  }
+
+  75% {
+    clip: rect(2px, 9999px, 82px, 0);
+  }
+
+  80% {
+    clip: rect(47px, 9999px, 73px, 0);
+  }
+
+  85.0% {
+    clip: rect(3px, 9999px, 27px, 0);
+  }
+
+  90% {
+    clip: rect(26px, 9999px, 55px, 0);
+  }
+
+  95% {
+    clip: rect(42px, 9999px, 97px, 0);
+  }
+
+  100% {
+    clip: rect(38px, 9999px, 49px, 0);
+  }
+}
+
+.homeSocials:hover {
+  color: #46ffdb;
+
+}
+
+img {
+  display: inline-block;
+}
+

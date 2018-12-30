@@ -1,0 +1,26 @@
+p {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 5%;
+    text-align: center;
+}
+
+h1 {
+    color: #58f2dd;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+hr {
+    color: #f60053;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

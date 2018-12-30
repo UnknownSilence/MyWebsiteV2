@@ -1,0 +1,26 @@
+.divImg {
+    display: block;
+    margin: 0 auto;
+}
+
+p {
+    width: 100%;
+    text-overflow: break-word;
+    white-space: wrap;
+    line-height: 120%;
+
+}
+
+h1 {
+    width: 100%;
+    text-overflow: break-word;
+    white-space: wrap;
+    line-height: 120%;
+}
+
+#timeline {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+}
