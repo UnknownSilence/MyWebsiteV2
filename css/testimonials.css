@@ -26,3 +26,8 @@ hr {
     display: table;
     clear: both;
 }
+
+
+.container {
+    height: 100%;
+}
